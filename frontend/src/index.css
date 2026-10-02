@@ -1,0 +1,74 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+
+/* YAHAN SE BACKGROUND IMAGE SET HOGI */
+body { 
+  background-color: #f8f9fc;
+  background-image: url('/bg.jpg'); /* Public folder me bg.jpg naam se image rakhna */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333; 
+}
+
+/* Authentication Screen */
+.auth-container { max-width: 900px; margin: 5vh auto; background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+.auth-header h1 { font-size: 2.5rem; letter-spacing: 2px; margin: 10px 0; }
+.auth-header span { color: #8e44ad; }
+.auth-header p { color: #7f8c8d; font-size: 0.9rem; margin-bottom: 40px; letter-spacing: 1px; }
+.section-title { color: #8e44ad; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 20px; }
+
+.role-cards { display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; text-align: left; }
+.role-card { flex: 1; padding: 20px; border: 2px solid #eee; border-radius: 15px; cursor: pointer; transition: 0.3s; background: white; }
+.role-card:hover, .role-card.active { border-color: #8e44ad; box-shadow: 0 5px 15px rgba(142, 68, 173, 0.15); }
+.role-icon-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.clearance-badge { background: #f3e5f5; color: #8e44ad; padding: 4px 10px; border-radius: 8px; font-size: 0.8rem; font-weight: bold; }
+.role-card h3 { color: #2c3e50; font-size: 1.1rem; }
+.role-card h4 { color: #7f8c8d; font-size: 0.8rem; margin: 5px 0 10px; letter-spacing: 1px; }
+.role-card p { font-size: 0.85rem; color: #95a5a6; }
+
+.pin-section { background: #f8f9fa; padding: 30px; border-radius: 15px; text-align: left; }
+.pin-section label { display: block; font-size: 0.8rem; font-weight: bold; color: #7f8c8d; margin-bottom: 10px; }
+.pin-section input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; margin-bottom: 20px; }
+.auth-btn { width: 100%; padding: 15px; background: #8e44ad; color: white; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+
+/* Dashboard Layout */
+.app-layout { display: flex; min-height: 100vh; background: rgba(248, 249, 252, 0.9); }
+.sidebar { width: 280px; background: white; border-right: 1px solid #eee; padding: 20px; }
+.profile-card { border: 1px solid #eee; padding: 15px; border-radius: 15px; margin-bottom: 30px; background: #fcfcfc; }
+.profile-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.profile-header h3 { font-size: 1.1rem; color: #2c3e50; }
+.profile-header p { font-size: 0.75rem; color: #8e44ad; font-weight: bold; }
+.stat-row { display: flex; justify-content: space-between; font-size: 0.8rem; color: #7f8c8d; margin-top: 10px; border-top: 1px dashed #eee; padding-top: 10px; }
+
+.sidebar-nav { display: flex; flex-direction: column; gap: 10px; }
+.nav-label { font-size: 0.75rem; font-weight: bold; color: #95a5a6; margin-bottom: 10px; letter-spacing: 1px; }
+.sidebar-nav a { text-decoration: none; color: #34495e; padding: 12px 15px; border-radius: 10px; font-size: 0.95rem; font-weight: 500; display: flex; justify-content: space-between; align-items: center; }
+.sidebar-nav a:hover, .sidebar-nav a.active { background: #f3e5f5; color: #8e44ad; }
+.alert-badge { background: #ffdede; color: #e74c3c; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; }
+
+.dashboard-content { flex: 1; padding: 40px; }
+.dash-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
+.dash-header h1 { color: #2c3e50; margin-bottom: 5px; }
+.dash-header p { color: #7f8c8d; }
+.header-actions { display: flex; gap: 15px; }
+.sync-btn { border: 1px solid #ddd; background: white; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+.danger-btn { border: 1px solid #ffdede; background: #fff0f0; color: #e74c3c; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.metric-card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eee; }
+.metric-card.alert { background: #fffaf9; border-color: #ffdede; }
+.card-top { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.badge { padding: 5px 12px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; }
+.badge.gray { background: #f1f2f6; color: #7f8c8d; }
+.badge.green { background: #e0f8e9; color: #2ecc71; }
+.badge.red { background: #ffdede; color: #e74c3c; }
+.metric-title { font-size: 0.85rem; font-weight: bold; color: #95a5a6; letter-spacing: 1px; margin-bottom: 10px; }
+.metric-card h2 { font-size: 2.5rem; color: #2c3e50; }
+.metric-card h2 span { font-size: 1rem; color: #7f8c8d; font-weight: normal; }
+.text-green { color: #2ecc71 !important; }
+.text-red { color: #e74c3c !important; }
+.metric-footer { font-size: 0.8rem; color: #95a5a6; margin-top: 20px; }
+.metric-footer.spread { display: flex; justify-content: space-between; font-weight: bold; }
+.progress-bar { height: 6px; background: #eee; border-radius: 3px; margin: 15px 0; overflow: hidden; }
+.progress-bar .fill { width: 91%; height: 100%; background: linear-gradient(90deg, #3498db, #8e44ad); }
