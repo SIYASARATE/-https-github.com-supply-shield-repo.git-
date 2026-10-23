@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import './App.css'; 
+import Scanner from './Scanner';
+import Dashboard from "./Dashboard";
 
 function App() {
   const [activeRole, setActiveRole] = useState(null);
@@ -185,16 +187,7 @@ function App() {
         )}
 
         {/* ================= AUDITOR ================= */}
-        {activeRole === 'Auditor' && (
-          <div>
-            <h3 style={{ color: '#0d3b44' }}>System Security & Immutable Audits</h3>
-            <ul style={{ background: '#f5f5f5', padding: '20px', borderRadius: '8px', listStyleType: 'none', margin: 0 }}>
-              <li style={{ padding: '10px', borderBottom: '1px solid #ddd' }}>✅ [10:42 AM] - QR Operator generated batch 'Box-101'</li>
-              <li style={{ padding: '10px', borderBottom: '1px solid #ddd', color: 'red', fontWeight: 'bold' }}>🚨 [11:05 AM] - ALERT: Scanner 2 reported shortage at Checkpoint B</li>
-            </ul>
-          </div>
-        )}
-
+        {activeRole === 'Auditor' && <Dashboard />}
         {/* ================= SCANNER (SIMULATED) ================= */}
         {activeRole === 'Scanner' && (
           <div>
@@ -208,8 +201,12 @@ function App() {
             <button onClick={() => alert('🚨 Red Alert! Shortage flagged. This event has been permanently recorded in Logs.')} style={{...btnStyle, backgroundColor: '#e63946', width: '100%'}}>
               FLAG ISSUE / SHORTAGE
             </button>
+            <Scanner />
+            <Dashboard/>
           </div>
+          
         )}
+         
 
       </main>
     </div>
