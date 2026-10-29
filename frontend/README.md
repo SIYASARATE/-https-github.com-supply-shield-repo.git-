@@ -1,16 +1,44 @@
-# React + Vite
+# SupplyShield (ChainGuard)
+Secure Supply Chain Monitoring & Tamper-Detection System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
+SupplyShield is a full-stack cloud application built for secure supply chain tracking. It uses SHA-256 cryptographic hashing, role-based access control (RBAC), and secure 4-digit PIN authentication to ensure tamper-proof logistics monitoring and audit logging.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite, JavaScript, CSS
+- **Backend:** Python, FastAPI, Supabase, PostgreSQL
+- **Security:** SHA-256 Cryptographic Hashing, Role-Based Access Control
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🔑 Login & Testing Credentials (For Evaluators)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Admin Login
+- **Name:** Siya Sarate (Admin)
+- **Master PIN:** `1234`
+- **Access:** Full administrative controls, employee management, and audit logs.
 
-## Expanding the ESLint configuration
+### 2. Employee / Manager / Scanner Login
+- Created dynamically by the Admin from the dashboard.
+- Generates a secure **4-digit PIN** stored securely in browser storage (`localStorage`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ How to Run the Project Locally
+
+### Step 1: Run the Backend (FastAPI)
+Open a terminal in the backend folder and run:
+\`\`\`bash
+cd backend
+uvicorn main:app --reload
+\`\`\`
+*(Backend will start at: \`http://localhost:8000\`)*
+
+### Step 2: Run the Frontend (React)
+Open a separate terminal in the frontend folder and run:
+\`\`\`bash
+cd frontend
+npm install
+npm run dev
+\`\`\`
+*(Frontend will start at: \`http://localhost:5173\`)*
