@@ -93,7 +93,7 @@ const Dashboard = ({ activeRole, currentUser }) => {
   };
 // --- ADMIN SECTION LOGIC START ---
   const [empName, setEmpName] = useState('');
-  const [empRole, setEmpRole] = useState('Scanner Operator');
+  const [empRole, setEmpRole] = useState('Scanner');
   const [employees, setEmployees] = useState([
     { id: 'EMP-101', name: 'Mohit Kumar', role: 'Manager', status: 'Active' },
     { id: 'EMP-102', name: 'Priya Sharma', role: 'Scanner', status: 'Active' }
@@ -181,7 +181,7 @@ const Dashboard = ({ activeRole, currentUser }) => {
                   onChange={(e) => setEmpRole(e.target.value)}
                   style={{ flex: 1, padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
                 >
-                   <option value="Scanner Operator">Scanner Operator</option>
+                   <option value="Scanner">Scanner </option>
                    <option value="Manager">Manager</option>
                    <option value="Auditor">Auditor</option>
                    <option value="QR Operator">QR Operator</option>
